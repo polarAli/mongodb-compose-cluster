@@ -12,3 +12,4 @@
   ```bash
   docker exec -it mongo1 /scripts/rs-init.sh
   ```
+- The WebUI should be available at `8081` port
