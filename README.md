@@ -5,5 +5,5 @@
   ```
 - execute `rs-initiate.sh` to initiate the replica set
   ```bash
-  docker exec -it mongo1 /rs-initiate.sh
+  docker exec -it mongo1 /scripts/rs-init.sh
   ```
