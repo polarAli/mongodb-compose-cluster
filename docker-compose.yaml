@@ -24,7 +24,7 @@ services:
     - mongo2
     - mongo3
     restart: always
-    entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs"]
+    entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs", "--keyFile", "mongodb-keyfile"]
 
   mongo2:
     container_name: mongo2
@@ -40,7 +40,7 @@ services:
     ports:
     - 27018:27017
     restart: always
-    entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs"]
+    entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs", "--keyFile", "mongodb-keyfile"]
 
   mongo3:
     container_name: mongo3
@@ -56,7 +56,7 @@ services:
     ports:
     - 27019:27017
     restart: always
-    entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs"]
+    entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs", "--keyFile", "mongodb-keyfile"]
 
   mongo-express:
     container_name: mongo-express
