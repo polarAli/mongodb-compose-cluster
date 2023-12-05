@@ -2,7 +2,7 @@
 
 DELAY=25
 
-mongo <<EOF
+mongosh <<EOF
 var config = {
     "_id": "dbrs",
     "version": 1,
@@ -31,4 +31,4 @@ echo "****** Waiting for ${DELAY} seconds for replicaset configuration to be app
 
 sleep $DELAY
 
-mongo < /scripts/init.js
+mongosh < /scripts/init.js
