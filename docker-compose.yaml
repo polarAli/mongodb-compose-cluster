@@ -67,7 +67,7 @@ services:
     - 8081:8081
     environment:
       PORT: "8081"
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo1:27017/
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo1:27017,mongo2:27017,mongo3:27017/admin?authSource=admin&replicaSet=dbrs
       ME_CONFIG_BASICAUTH_USERNAME: root
       ME_CONFIG_BASICAUTH_PASSWORD: example2
     depends_on:
